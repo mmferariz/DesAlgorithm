@@ -133,10 +133,10 @@ const App = () => {
       finalKey = textToBin(isAutogenerate ? tempPass : mainKey, 32)
       finalBitText = textToBin(plainText, 32)
     } else if (plainText.length <= 8) {
-      finalKey = textToBin(mainKey, 64)
+      finalKey = textToBin(isAutogenerate ? tempPass : mainKey, 64)
       finalBitText = textToBin(plainText, 64)
     } else {
-      finalKey = textToBin(mainKey, 128)
+      finalKey = textToBin(isAutogenerate ? tempPass : mainKey, 128)
       finalBitText = textToBin(plainText, 128)
     }
     setAuxMainKey(finalKey)
@@ -207,6 +207,7 @@ const App = () => {
           <input type="checkbox" className="custom-control-input" id="generatePass" name="generatePass" value={isAutogenerate} onChange={() => {
             setIsAutogenerate(!isAutogenerate)
             setMainKey("")
+            setAuxMainKey("")
           } }/> 
           <label className="custom-control-label" htmlFor="generatePass">Auto-generate Password</label>
         </div>
