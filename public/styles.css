@@ -1,29 +1,33 @@
 body {
-    background-color: rgb(230, 175, 123);
+    background-image: linear-gradient(to bottom, #6B5B95, #7e6da8, #FFFFFF);
+    background-attachment: fixed;
     font-family:monospace;
     font-size: x-large;
+    height: 100%;
+    margin: 0;
 }
 
 h1 {
     margin-top: "150px";
     text-align: "center";
+    color: #e0e0e0;
 }
 
 .btn {
     border: 2px solid black;
 }
 
-input {
+.customInput {
     border-radius: 20px;
     padding: 10px 10px;
-    border: 2px solid brown;
+    border: 2px solid #8f0010;
     width: 75%;
 }
 
 .block {
-    background-color: antiquewhite;
+    background-color: #e0e0e0;
     border-radius: 10px;
-    border: 2px solid brown;
+    border: 2px solid #8f0010;
     width: fit-content;
     margin: 20px auto;
     padding: 25px 25px;
